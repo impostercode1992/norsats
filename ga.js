@@ -1,4 +1,3 @@
-<html><head></head><body>
 <script>
   var YOUR_CLIENT_ID = '53470530043-5gvhfeap2r8e2vjdjbjl82q22u75pq5k.apps.googleusercontent.com';
   var YOUR_REDIRECT_URI = 'https://www.norsats.my/user';
@@ -121,6 +120,3 @@
     form.submit();
   }
 </script>
-
-<button onclick="trySampleRequest();">Try sample request</button>
-</body></html>
