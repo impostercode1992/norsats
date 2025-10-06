@@ -21,7 +21,7 @@
          .w3-sidebar,body,h1,h2,h3,h4,h5,h6,.w3-wide, a, u {font-family: "Raleway", sans-serif; text-decoration: none;}
       </style>
 </head>
-<body class="w3-light-grey">
+<body class="w3-light-grey" onload="checkAuthAndLoadContent()">
 <header>
 
   <!-- Navbar (sit on top) -->
@@ -71,32 +71,6 @@
 </footer>
 
 <script>
-        function decodeJWT(token) {
-        let base64Url = token.split(".")[1];
-        let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-        let jsonPayload = decodeURIComponent(
-          atob(base64)
-          .split("")
-          .map(function (c) {
-            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-          })
-          .join("")
-        );
-        return JSON.parse(jsonPayload);
-        }
-        
-        function handleCredentialResponse(response) {
-        console.log("Encoded JWT ID token: " + response.credential);
-        const responsePayload = decodeJWT(response.credential);
-        console.log("Decoded JWT ID token fields:");
-        console.log("  Full Name: " + responsePayload.name);
-        console.log("  Given Name: " + responsePayload.given_name);
-        console.log("  Family Name: " + responsePayload.family_name);
-        console.log("  Unique ID: " + responsePayload.sub);
-        console.log("  Profile image URL: " + responsePayload.picture);
-        console.log("  Email: " + responsePayload.email);
-        }
-
         // Modal Image Gallery
         function onClick(element) {
           document.getElementById("img01").src = element.src;
@@ -121,5 +95,6 @@
             mySidebar.style.display = "none";
         }
       </script>
+      <script src="ga.js"></script>
 </body>
 </html>
