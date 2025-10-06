@@ -1,4 +1,3 @@
-<script>
   var YOUR_CLIENT_ID = '53470530043-5gvhfeap2r8e2vjdjbjl82q22u75pq5k.apps.googleusercontent.com';
   var YOUR_REDIRECT_URI = 'https://www.norsats.my/user';
 
@@ -119,4 +118,3 @@
     document.body.appendChild(form);
     form.submit();
   }
-</script>
