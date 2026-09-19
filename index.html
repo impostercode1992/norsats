@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head class="head"></head>
-    <navbar class="navbar"></navbar>
-<body class="w3-light-grey">
-  <div class="w3-content">
-        <div id="work"></div>
-  <work></work>
-  <div class="team"></div>
-  <div class="price"></div>
-  </div>
-  <footer class="footer"></footer>
-  <script defer="defer" src="development.js"></script>
-  <script src="DOM.js"></script>
-  
-          <script>
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Business Website</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { color: #333; line-height: 1.6; }
+        header { background: #1a365d; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+        .hero { background: linear-gradient(rgba(26,54,93,0.8), rgba(26,54,93,0.8)), url('https://picsum.photos') no-repeat center center/cover; color: white; padding: 8rem 2rem; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .container { max-width: 1100px; margin: auto; padding: 4rem 2rem; }
+        .services { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
+        .card { flex: 1; min-width: 280px; padding: 2rem; background: #f7fafc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 1rem; color: #2b6cb0; }
+        .contact-form { max-width: 600px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+        .contact-form input, .contact-form textarea { padding: 0.8rem; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 1rem; }
+        .btn { background: #3182ce; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; text-decoration: none; text-align: center; display: inline-block; }
+        .btn:hover { background: #2b6cb0; }
+        footer { background: #1a365d; color: white; text-align: center; padding: 1.5rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
 
-        function w3_open() {
-          if (mySidebar.style.display === 'block') {
-            mySidebar.style.display = 'none';
-          } else {
-            mySidebar.style.display = 'block';
-          }
-        }
+    <header>
+        <h2>My Business</h2>
+    </header>
 
-        // Close the sidebar with the close button
-        function w3_close() {
-            mySidebar.style.display = "none";
-        }
-        </script>
+    <section class="hero">
+        <h1>Professional Services for Your Business</h1>
+        <p>Reliable, efficient, and tailored to help you succeed.</p>
+        <a href="#contact" class="btn">Get a Free Quote</a>
+    </section>
+
+    <section class="container">
+        <h2 style="text-align: center;">Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Consulting</h3>
+                <p>Expert advice to streamline your operations and maximize growth potential.</p>
+            </div>
+            <div class="card">
+                <h3>Management</h3>
+                <p>End-to-end oversight to ensure your daily projects run seamlessly.</p>
+            </div>
+            <div class="card">
+                <h3>Support</h3>
+                <p>24/7 dedicated customer assistance to handle your business needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="border-top: 1px solid #e2e8f0;">
+        <h2 style="text-align: center;">Contact Us</h2>
+        <p style="text-align: center; color: #718096;">Fill out the form below and we will get back to you shortly.</p>
+        
+        <!-- FREE CONTACT FORM BACKEND BY WEB3FORMS -->
+        <form action="https://web3forms.com" method="POST" class="contact-form">
+            <!-- Replace YOUR_ACCESS_KEY_HERE with your key from web3forms.com -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 My Business. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
